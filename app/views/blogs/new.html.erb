@@ -1,16 +1,24 @@
 <h1>新規投稿</h1>
 <!-- form_for部分 -->
 <%= form_for(@blog) do |f| %>
+	<div class="field">
+	  	<h4>タイトル</h4>
+	  	<%= f.text_field :title,class: "book_title" %>
+	</div>
 
-  <h4>タイトル</h4>
-  <%= f.text_field :title %>
+	<div class="field">
+		<h4>カテゴリー</h4>
+	  	<%= f.text_field :category %>
+	</div>
 
-  <h4>カテゴリー</h4>
-  <%= f.text_field :category %>
+	<div class="field">
+		<h4>本文</h4>
+	  	<%= f.text_area :body %>
+	</div>
 
-  <h4>本文</h4>
-  <%= f.text_area :body %>
+	<div class="actions">
+		<%= f.submit '投稿' %>
+	</div>
 
-  <%= f.submit '投稿'  %>
 
 <% end %>
